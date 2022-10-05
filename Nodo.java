@@ -10,3 +10,4 @@ class Nodo {
     info=0;
     seg=null;
   }
+}
