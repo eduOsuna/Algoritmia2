@@ -1,11 +1,5 @@
-package Taller1;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-// Ejercicio 4
-/*  Eliminació del k-èssim element d’una llista. Considera una llista lineal 
+/*  --------------------- EJERCICIO 4 --------------------
+ *  Eliminació del k-èssim element d’una llista. Considera una llista lineal 
  *  amb un nombre arbitrari d’elements. Construeix un algorisme que 
  *  elimini el k-èssim element de la llista, on k és un valor enter arbitrari
  *  que es llegeix al principi de l'algorisme com a paràmetre d'entrada. S'ha
@@ -15,10 +9,17 @@ import java.io.InputStreamReader;
  *  L'algorisme també ha de tenir dues opcions addicionals: una per crear 
  *  la llista inicialment i l'altra per per imprimir la llista linial quan l'usuari
  *  consideri oportú.
- * 
  */
+ 
+package Taller1;
 
- class Ejercicio4 {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+
+
+class Ejercicio4 {
 
     //objeto Scanner para gestionar la entrada por teclado
     private BufferedReader leer = new BufferedReader(new InputStreamReader(System.in));
@@ -67,4 +68,4 @@ import java.io.InputStreamReader;
         opcion = Integer.parseInt(leer.readLine());
         return opcion;
     }
- }
+}

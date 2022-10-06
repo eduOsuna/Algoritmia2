@@ -1,9 +1,4 @@
-package Taller1;
-
-import java.util.Scanner;
-
-// Ejercicio 3
-/*
+/*  --------------------- EJERCICIO 3 --------------------
  *  Inserció d’un element en una llista ordenada. Considera una llista
  *  ordenada de menor a major d’acord amb el contingut del camp info dels
  *  nodes, el qual es pot considerar de tipus enter. Desenvolupa un 
@@ -19,6 +14,12 @@ import java.util.Scanner;
  *  l'usuari consideri oportú.
  * 
  */
+ 
+package Taller1;
+
+import java.util.Scanner;
+
+
 
  class Ejercicio3 {
 
