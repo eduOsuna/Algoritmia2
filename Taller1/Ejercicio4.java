@@ -17,7 +17,23 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-
+/*-------------------------------------------------------------------------------------------------------------------------------
+/ En este ejercicio, a partir de una lista de información proporcionada por el usuario a partir del teclado, solicitamos
+/ al usuario un valor (k) para eliminar el nodo que se encuentre en esa posición. El usuario debe tener la opción para
+/ visualizar la lista cuando desee. Para representar su decisión se usará la variable entera "opcion" de manera que 1 
+/ equivalga a "sí". Concretamente, se le permitirá ver la lista tras crearla y tras eliminar un elemento.
+/ Para realizar todas las operaciones necesitaremos utilizar una variables puntero auxiliar "aux". Con ella podremos
+/ apuntar al nodo anterior al que se va a eliminar. 
+/ En cuanto al tratamiento, lo primero que haremos una vez el usuario nos haya dado la posición del nodo a eliminar es 
+/ inicializar aux para que apunte al primer nodo. Como en otros ejercicios pasados, debemos distinguir el caso de
+/ eliminar el primer nodo (k==1). Si k==1, entonces haremos que primer apunte al segundo nodo. Si no, haremos un bucle
+/ hasta llegar a la posición k-1, de manera que quede apuntada por aux. En este punto, volvemos a tener una bifurcación:
+/ si k es igual al número de nodos por los que hemos pasado (este dato lo obtendremos en el paso anterior), entonces
+/ haremos que el nodo k-1 apunte al k+1 por medio de aux. Si no, significa que k es mayor al tamaño de la lista, por lo
+/ que no eliminamos nada e informaremos al usuario de que no se eliminó nada.
+/ Finalmente, como comentamos anteriormente, daremos al usuario la opcion de ver la lista actualizada.
+/--------------------------------------------------------------------------------------------------------------------------------
+*/
 
 class Ejercicio4 {
 

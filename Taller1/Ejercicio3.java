@@ -19,7 +19,25 @@ package Taller1;
 
 import java.util.Scanner;
 
-
+/*-------------------------------------------------------------------------------------------------------------------------------
+/ En este ejercicio, creamos una lista a partir de información proporcionada por el usuario a partir del teclado
+/ con la particularidad de que los nodos deben quedar en orden no decreciente según el campo info.
+/ Los nodos se irán introduciendo uno a uno mientras el usuario lo desee. Para representar su decisión se usará 
+/ la variable entera "opcion". La acción de añadir un nuevo nodo se ejecutará en bucle mientras la opción sea 1 (Sí).
+/ Para poder llevar a cabo la operación de inserción necesitaremos dos punteros adicionales a nodos: newNode, que
+/ servirá para crear el nuevo nodo y aux, que la usaremos para apuntar al nodo que se encuentre justo antes del
+/ lugar de inserción.
+/ En cuanto al tratamiento, al igual que en el ejercicio 1 debemos distinguir entre la adición del primer nodo y 
+/ la de los demás. Primero, si la lista está vacía, se creará un nuevo nodo directamente apuntado por el puntero
+/ primer. En caso contrario, primero inicializaremos la variable aux para que apunte al primer nodo de la lista.
+/ Posteriormente, comprobamos si el nodo se debe insertar en la primera posicion. En tal caso, creamos el nuevo
+/ nodo con aux, le damos el valor deseado a info, al campo seg le damos el contenido de primer y a primer, la
+/ dirección de aux. Por otro lado, si debemos introducir el nodo en cualquier otra posición, buscamos el nodo
+/ anterior a dicha posición comparando el valor deseado con el campo info de los distintos nodos y actualizando
+/ aux. Una vez hecho, creamos el nodo con newNode y utilizando aux para acceder al nodo anterior insertamos el
+/ nuevo nodo a la lista.
+/-------------------------------------------------------------------------------------------------------------------------------
+*/
 
  class Ejercicio3 {
 

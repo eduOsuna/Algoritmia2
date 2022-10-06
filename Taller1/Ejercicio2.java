@@ -17,22 +17,27 @@ import java.util.Scanner;
 
 /*-------------------------------------------------------------------------------------------------------------------------------
 / En este ejercicio, a partir de una lista de información proporcionada por el usuario a partir del teclado, solicitamos
-/ al usuario un valor para eliminar el nodo cuyo campo info coincida y insertarlo en la lista "lliures".
-/ 
-/ 
-/ Para representar su decisión se usará la variable entera "opcion". La acción de añadir un nuevo nodo se ejecutará
-/ en bucle mientras la opción sea 1 (Sí).
-/ En cuanto al tratamiento, debemos distinguir entre la adición del primer nodo y la de los demás. En el primer
-/ caso, se creará un nuevo nodo directamente apuntado por el puntero primer. Además, tendremos otra variable puntero
-/ "aux" que también apunte a dicho nodo. En los casos restantes, crearemos un nodo mediante la variable aux que
-/ sea apuntado por el campo seg del último nodo de la lista actual. Posteriormente,  el usuario introducirá el
-/ campo "info" y haremos que aux apunte al nuevo último nodo para poder repetir el proceso.
-/ Finalmente, para imprimir la lista, usaremos una variable puntero auxiliar que inicialmente apunte al primer
-/ nodo y iremos imprimiendo el campo info de cada nodo hasta llegar al último mediante un bucle. 
-/-------------------------------------------------------------------------------------------------------------------------------
+/ al usuario un valor para eliminar el nodo cuyo campo info coincida y insertarlo en la lista "lliures". Esta acción se
+/ repetirá tantas veces como el usuario quiera. Para representar su decisión se usará la variable entera "opcion" de
+/ manera que 1 equivalga a "sí". 
+/ Para realizar todas las operaciones necesitaremos utilizar múltiples variables puntero (a Nodos). Distinguiremos
+/ entre nodoLliures, que lo usaremos para apuntar al nodo a eliminar; apuntador, que lo usaremos para apuntar al nodo
+/ previo a nodoLliures, para poder eliminarlo de la lista, y finalmente punteroLliures, que nos servirá  para apuntar
+/ al último nodo de la lista lliures para así poder añadir el nodoLliures.
+/ En cuanto al tratamiento, lo primero que haremos una vez el usuario nos haya dado el valor del nodo a eliminar es obtener
+/ dicho nodo. Una vez hecho, debemos distinguir la situación particular en la que el nodoLliures sea el primero. En ese
+/ caso, haremos que primer apunte al segundo nodo de la lista. En caso contrario, buscaremos el nodo previo a nodoLliures
+/ mediante un bucle. Después, debemos distinguir nuevamente entre 2 situaciones: aquella en la que la llista lliures está
+/ vacía y cualquier otra posible situación. Si lliures está vacía (es decir, que lliures apunta a null/nil), insertamos
+/ nodoLliures en la lista y hacemos que el campo seg del nodo apunte a null. En cambio, si no está vacía, primero apuntamos
+/ al último nodo de la lista lliures con punteroLliures y luego insertamos el nodo de manera similar al caso anterior.
+/ Tras realizar estas operaciones, nodoLliures ha sido eliminado de la primera lista y ha sido insertado en lliures. Ahora
+/ volvemos a pedir al usuario si desea seguir eliminando nodos.
+/ Cuando salga del bucle de eliminación, le preguntaremos si quiere visualizar las 2 listas.
+/--------------------------------------------------------------------------------------------------------------------------------
 */
 
-public class Ejercicio2{
+public class Ejercicio2 {
     public static void main(String[] args) {
         int opcion, valor;
         Scanner s = new Scanner(System.in);
