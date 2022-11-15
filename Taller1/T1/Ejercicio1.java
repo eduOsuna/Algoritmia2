@@ -27,7 +27,8 @@ import java.util.Scanner;
 / nodo y iremos imprimiendo el campo info de cada nodo hasta llegar al último mediante un bucle. 
 /-------------------------------------------------------------------------------------------------------------------------------
 */
-public class Ejercicio1{
+
+public class Ejercicio1 {
     public static void main(String[] args) {
         int opcion;
         Scanner s = new Scanner(System.in);

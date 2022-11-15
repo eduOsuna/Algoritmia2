@@ -3,6 +3,7 @@ package Taller1;
 import java.util.Scanner;
 
 //clase Lista
+
 public class Lista {
     // Atributos
     private Nodo primer;
